@@ -1,0 +1,387 @@
+ 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background:#363636;
+}
+#logoCss, #logoCss2{
+    max-width: 38vw;
+    position: fixed;
+    opacity: 0.2;
+    z-index: -1;
+}
+#logoCss{
+    top: 10%;
+    right: 5%;
+    transform: rotateZ(10deg);
+}
+
+#logoCss2{
+    bottom: 10%;
+    left: 5%;
+    transform: rotateZ(-10deg);
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    color: #56a7bb;
+    justify-content: center;
+    align-items: space-between;
+    background: linear-gradient(#0000008e,#00000000);
+    padding: 100px 3vw;
+    text-align: center;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 11vw;
+}
+
+h2{
+    font-weight: 300;
+    font-size: 4vw;
+}
+
+h3{
+    text-align: center;
+    color: #56a7bb;
+    text-shadow: 0 0 7px#0000004f;
+    transform: rotateZ(-3deg);
+}
+
+.tituloExperimental{
+    color: #71b42e;
+}
+
+h4{
+    color: rgb(224, 224, 224);
+}
+
+.pag{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    padding-top: 4px;
+    background-color: #00000018;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    color:#56a7bb;
+    border: 1px solid #585858;
+    text-shadow: 0 0 7px #00000050;
+    text-align: center;
+    top: 5px;
+    left: 5px;
+}
+
+.container-grid{
+    padding: 0 2vw;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 25px;
+}
+
+.container-grid section p{
+    text-align: justify;
+}
+
+.container-grid section{
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 5px 25px #00000048;
+    padding: 10px;
+    background-color:#20202059;
+    border: 1px solid #585858;
+    color: #9e9e9e;
+    display: grid;
+    align-content: flex-start;
+    justify-items: center;
+    gap: 10px;
+    backdrop-filter: blur(3em);
+}
+
+ .container-grid section:hover{
+    background-color:#00000065;
+    backdrop-filter: blur(4em);
+    border: 1px solid #56a7bb;
+    box-shadow: 5px 5px 25px #56a7bb93;
+}
+.container-grid .sectionExperimental:hover{
+    background-color:#00000065;
+    backdrop-filter: blur(4em);
+    border: 1px solid #71b42e;
+    box-shadow: 5px 5px 25px #71b42e93;
+}
+
+i{
+    color: #71b42e;
+}
+
+form{
+    width: 100%;
+    padding: 15px;
+}
+
+label{
+    font-size: 8pt;
+}
+
+fieldset{
+    border: none;
+}
+
+input{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 7px;
+    border: none;
+}
+
+input[type="text"], input[type="number"], input[type="email"]{
+    padding: 5px;
+    border-radius: 7px;
+    border: none;
+    width: 100%;
+}
+
+button{
+    padding:7px;
+    border-radius: 5px;
+    border: 1px solid #3dd8ff;
+    background-color: transparent;
+    color: #3dd8ff;
+    cursor: pointer;
+}
+
+.segundoNivel{
+    color: #3dd8ff;
+}
+.textoEjemplo{
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #71b42e;
+    cursor:pointer;
+}
+.figuraEjemplo{
+    height: 40px;
+    width: 50%;
+    background-color: #71b42e;
+    border-radius: 12px;
+    cursor:pointer;
+}
+.container1{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.container2{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+}
+
+.containerTitles{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.containerTitles img{
+    max-height: 17px;
+    min-height: 17px;
+}
+
+.codeBox{
+    width: 95%;
+    background-color: #1a1a1ade;
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #585858;
+}
+
+#pseudoclase1 .textoEjemplo:active{
+    color: #3dd8ff;  
+}
+
+#pseudoclase1 .figuraEjemplo:active{
+    background-color: #3dd8ff;  
+}
+
+#pseudoclase2 input:checked{
+    height: 30px;
+    width: 30px;
+}
+
+#pseudoclase3 input:default + label{
+    color:#3dd8ff;
+}
+
+#pseudoclase3 input:default{
+    box-shadow: 0 0 10px #3dd8ff;
+}
+
+#pseudoclase4 .codeBox p:dir(ltr){
+    color: #3dd8ff;
+}
+
+#pseudoclase5 input:disabled::placeholder{
+    color:#535353;
+}
+
+#pseudoclase5 input:disabled{
+    background-color: #3dd8ff;
+}
+
+#pseudoclase6 .figuraEjemplo{
+    margin: 5px;
+    padding: 10px;
+    font-size: 8.5pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #363636;
+}
+
+#pseudoclase6 .figuraEjemplo:empty{
+    background-color: #3dd8ff;
+}
+
+#pseudoclase7 input:enabled{
+    background-color: #3dd8ff;
+}
+
+#pseudoclase7 input:enabled::placeholder, #pseudoclase7 input:disabled::placeholder{
+    color:#363636;
+}
+
+#pseudoclase7 input:enabled::placeholder{
+    color:#535353;
+}
+
+@page :first {
+    margin-top: 150px;
+}
+      
+section {
+    page-break-after:avoid;
+}
+.container3{
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.185);
+}
+
+#pseudoclase9 .container3 p{
+font-size: 8pt;
+text-align: center;
+}
+
+#pseudoclase9 .container3 h3{
+    transform: rotateZ(0);
+    color: #ffffff;
+    }
+
+#caja1 p:first-child{
+    color:violet;
+}
+
+#caja2 h3:first-child{
+    color:#71b42e;
+}
+
+#pseudoclase16 .formEjemplo{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#pseudoclase16 .formEjemplo input:invalid{
+    background-color: #FF8686;
+    border: none;
+}
+
+#pseudoclase17 .textoEjemplo2:lang(en){
+    color: #3dd8ff;
+}
+/*
+#2e222f
+#3e3546
+#625565
+#966c6c
+#ab947a
+#694f62
+#7f708a
+#9babb2
+#c7dcd0
+#6e2727
+#b33831
+#ea4f36
+#f57d4a
+#ae2334
+#e83b3b
+#fb6b1d
+#f79617
+#f9c22b
+#7a3045
+#9e4539
+#cd683d
+#e6904e
+#fbb954
+#4c3e24
+#676633
+#a2a947
+#d5e04b
+#fbff86
+#165a4c
+#239063
+#1ebc73
+#91db69
+#cddf6c
+#313638
+#374e4a
+#547e64
+#92a984
+#b2ba90
+#0b5e65
+#0b8a8f
+#0eaf9b
+#30e1b9
+#8ff8e2
+#323353
+#484a77
+#4d65b4
+#4d9be6
+#8fd3ff
+#45293f
+#6b3e75
+#905ea9
+#a884f3
+#eaaded
+#753c54
+#a24b6f
+#cf657f
+#ed8099
+#831c5d
+#c32454
+#f04f78
+#f68181
+#fca790
+#fdcbb0*/

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>:pseudoclases</h1>
+      <h2>en css</h2>
+    </nav>
+  </header>
+  <img id="logoCss" src="images/CSS.3.svg" alt="">
+  <img id="logoCss2" src="images/CSS.3.svg" alt="">
+  <main>
+    <div class="container-grid">
+      <section id="pseudoclase1">
+        <h5 class="pag">1</h5>
+        <h3>:active</h3>
+        <p>La pseudo-clase (en-US) :active de CSS   representa un elemento (como un botón) que el usuario está activando.  Cuando se usa un mouse, la "activación" generalmente comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta. La pseudo-clase :active se usa comúnmente en los elementos "a" y "button", pero también se puede usar en otros elementos. </p>
+  
+        <h4>Ejemplo:</h4>
+        <p >A los elementos <i>.text</i> y <i>.shape</i> input se les especificaron los siguientes estilos en css:</p>
+  
+        <div class="codeBox">
+          <i>.text</i><i class="segundoNivel">:active</i><i>{ <br> color: aqua;}</i><br><br><i>.shape</i><i class="segundoNivel">:active</i><i>{ <br> background-color: aqua;}</i>
+        </div>
+  
+        <p>Al aplicar la pseudoclase :active, los elementos cambiarán su color a azul (aqua) cuando se haga clic sobre ellos.</p>
+  
+        <p class="textoEjemplo">Texto</p>
+        <div class="figuraEjemplo"></div>
+      </section>
+  
+      <section id="pseudoclase2">
+        <h5 class="pag">2</h5>
+        <h3>:checked</h3>
+        <p>La pseudo-clase :checked de CSS representa cualquier <b>radio</b> (<i>input type="radio" (en-US)</i>),   <b>checkbox</b> (<i>input type="checkbox"</i>) u <b>option</b> (<i>option</i> en un elemento <i>select</i>) que está marcado o conmutado a un estado on.
+        </p>
+        <h4>Ejemplo:</h4>
+        <p>A la etiqueta <i>input</i> se le especificaron los siguientes estilos en css:</p>
+          
+        <div class="codeBox">
+          <i>input</i><i class="segundoNivel">:checked</i><i>{ <br> height: 30px; <br> width: 30px;}</i> 
+        </div>
+          
+        <p>Al aplicar la pseudoclase :checked, se modificará el tamaño de las input cuando estén seleccionadas; o dicho de otra manera, cuando estén en "on".</p>
+        <div class="container1">
+          <input type="radio" name="color">
+          <input type="radio" name="color">
+          <input type="checkbox">
+        </div>
+      </section>
+  
+      <section id="pseudoclase3">
+        <h5 class="pag">3</h5>
+        <h3>:default</h3>
+        <p>La pseudo-clase :default de CSS representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados. <br>
+        Este selector se puede usar en los elementos <i>button</i>, <i>input type="checkbox"</i>, <i>input type="radio"</i> y <i>option</i>.</p>
+        
+        <h4>Ejemplo:</h4>
+  
+        <p>A la etiqueta <i>input</i> se le especificaron los siguientes estilos en css:</p>
+          
+        <div class="codeBox">
+          <i>input</i><i class="segundoNivel">:default</i><i>{ <br> box-shadow: 0 0 10px aqua;}</i> <br><br>
+          <i>input</i><i class="segundoNivel">:default</i><i> + label{ <br> color: aqua;}</i>
+        </div>
+        <p>Al aplicar la pseudoclase :default, se agregará una sombra al <i>input</i>, que se definió como opción por defecto. Su respectivo <i>label</i> aparecerá también de color azul (aqua).</p>
+  
+        <div class="container2">
+          <div>
+            <input type="radio" name="color">
+            <label for="color">Opción 1</label>
+          </div>
+  
+          <div>
+            <input type="radio" name="color">
+            <label for="color">Opción 2</label>
+          </div>
+  
+          <div>
+            <input type="radio" name="color" checked>
+            <label for="color">Opción por defecto</label>
+          </div>
+  
+          <div>
+            <input type="radio" name="color">
+            <label for="color">Opción 3</label>
+          </div>
+        </div>
+      </section>
+  
+      <section class="sectionExperimental" id="pseudoclase4">
+        <h5 class="pag">4</h5>
+        <div class="containerTitles">
+          <h3 class="tituloExperimental">:dir()</h3>
+          <img src="images/experimental.svg" alt="">
+          <img src="images/firefox.svg" alt="">
+        </div>
+        
+        <p>La pseudo-clase :dir de CSS coincide con los elementos en función de la direccionalidad del texto contenido en ellos. <br><br> <b><i>ltr:</i></b> <br> Orientar elementos de izquierda a derecha. <br><br>
+        <b><i>rtl:</i></b><br> Orientar elementos de derecha a izquierda.</p>
+      
+        <h4>Ejemplo:</h4>
+  
+        <p >A los elementos con la clase <i>.text</i>, que se encuentran dentro de los <i>div</i> se le especificaron los siguientes estilos en css:</p>
+        
+        <div class="codeBox"><i>div .text</i><i class="segundoNivel">:dir(ltr)</i><i>{ <br> color aqua;}</i>
+        </div>
+        
+        <p>Al aplicar la pseudoclase :dir(ltr), se buscarán los textos que estén direccionados de izquierda a derecha. Los que cumplan con esta condición (ltr) se pintarán de azúl (aqua). <i class="segundoNivel">Nota: Pseudoclase experimental. Sólo funciona en Mozilla firefox</i> </p>
+        
+        <div class="codeBox">
+          <p dir="ltr">Texto</p>
+          <p dir="rtl">Texto</p>
+        </div>
+  
+      </section>
+
+      <section id="pseudoclase5">
+        <h5 class="pag">5</h5>
+        <h3>:disabled</h3>
+        <p>La pseudo-clase :disabled de CSS representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado (por ejemplo ser selecionado, hacer click en él o aceptar texto de entrada) ni aceptar el foco.</p>
+  
+        <h4>Ejemplo</h4>
+  
+        <p>En el siguiente formulario hay un grupo de 3 input. Al elemento <i>input</i> dispuesto para la Dirección, se le especificó en html el atributo <i class="segundoNivel">disabled</i>, por lo cual, no permitirá la entrada de texto. En css se le dieron estilos a los input que estén en estado <i class="segundoNivel">disabled</i>:</p>
+  
+        <div class="codeBox">
+          <i>input <i class="segundoNivel">:disabled</i>{<br>
+            background-color: aqua;}</i>
+        </div>
+  
+        <p>Debido a que es el único input en estado <i class="segundoNivel">disabled</i>, es el único que se rellena de color azul (aqua).</p>
+  
+        <div>
+          <form action="#">
+            <fieldset id="shipping">
+              <legend>Datos del usuario</legend>
+              <input type="text" placeholder="Nombre">
+              <input type="text" placeholder="Dirección" disabled>
+              <input type="text" placeholder="Correo">
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <section id="pseudoclase6">
+        <h5 class="pag">6</h5>
+        <h3>:empty</h3>
+        <p>La pseudo-clase :empty de CSS representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.</p>
+  
+        <h4>Ejemplo</h4>
+        <p>A todos los elementos <i>div</i> de abajo, se les especificaron los siguientes estilos en css:</p>
+        <div class="codeBox"><i>div{<br>backgrund-color: green;}</i><br><br><i>div<i class="segundoNivel">:empty</i>{<br>backgrund-color: aqua;}</i></div>
+  
+        <p>La pseudoclase <i class="segundoNivel">:empty</i> hace referencia a los elementos que están vacíos. Como el div de la izquierda no tiene contenido, los estilos se aplican a este y se rellena de color azul (aqua).</p>
+  
+        <div class="container1">
+          <div class="figuraEjemplo"></div>
+          <div class="figuraEjemplo"><p>div con contenido</p></div>
+        </div>
+        
+      </section>
+
+      <section id="pseudoclase7">
+        <h5 class="pag">7</h5>
+        <h3>:enabled</h3>
+        <p>La pseudo-clase :enabled CSS representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado (es decir seleccionado, se puede hacer click en él, acepta que se le introduzca texto, etc.) o si accepta el foco. El elemento también tiene un estado deshabilitado el en cuál, no puede ser activado ni acepta el foco.</p>
+  
+        <h4>Ejemplo</h4>
+  
+        <p>En el siguiente formulario hay un grupo de 3 input. Al elemento <i>input</i> dispuesto para la Dirección, se le especificó en html el atributo <i class="segundoNivel">disabled</i>, por lo cual, no permitirá la entrada de texto. En css se le dieron estilos a los input que estén en estado <i class="segundoNivel">enabled</i>:</p>
+  
+        <div class="codeBox">
+          <i>input <i class="segundoNivel">:enabled</i>{<br>
+            background-color: aqua;}</i>
+        </div>
+  
+        <p>Debido a que los input Nombre y Correo se encuentran en estado <i class="segundoNivel">enabled</i>, se rellenan de color azul (aqua).</p>
+  
+        <div>
+          <form action="#">
+            <fieldset id="shipping">
+              <legend>Datos del usuario</legend>
+              <input type="text" placeholder="Nombre">
+              <input type="text" placeholder="Dirección" disabled>
+              <input type="text" placeholder="Correo">
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <section id="pseudoclase8">
+        <h5 class="pag">8</h5>
+        <h3>:first</h3>
+        <p>La pseudo-clase :first de CSS, utilizada con la regla-at @page, representa la primera página de un documento impreso.</p>
+        <p>Nota: No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, orphans (en-US), widows y saltos de página del documento. Además, solo puede usar unidades de longitud absoluta al definir los márgenes. Todas las otras propiedades serán ignoradas.</p>
+        <h4>Ejemplo</h4>
+        <p>Con la pseudoclase <i class="segundoNivel">:first</i>, se hace referencia a la primera página a imprimir.</p>
+        <div class="codeBox">
+          <p> <i>@page<i class="segundoNivel">:first</i>{<br>margin-top: 150px;
+          }<br><br>section{<br>
+            page-break-after:avoid;
+        }</i> </p>
+        </div>
+        <p>Al dar clic en el botón inprimir de abajo, se abrirá una ventana para configurar la impresión de este sitio web. La primera página aparecerá con un margin-top (margen superior) de 150px.</p>
+        <div>
+          <button class="print">Imprimir</button>
+        </div>
+      </section>
+
+      <section id="pseudoclase9">
+        <h5 class="pag">9</h5>
+        <h3>:first-child</h3>
+        <p>La pseudo-clase :first-child de CSS representa el primer elemento entre un grupo de elementos hermanos.</p>
+
+        <h4>Ejemplo</h4>
+        <p>Se establecieron estilos en css para los primeros hijos de los dos contenedores:</p>
+        <div class="codeBox">
+          <i>.caja1 p<i class="segundoNivel">:first-child</i>{<br>color: violet;}<br><br>.caja2 h3<i class="segundoNivel">:first-child</i>{<br>color: green;}</i>
+        </div>
+        <p>Usando <i class="segundoNivel">:first-child</i> Se pintan los primeros hijos de las cajas uno y dos, respectivamente.</p>
+        <div class="container1">
+          <div class="container3" id="caja1">
+            <p>Esto es un párrafo</p><br>
+            <h3>Título</h3><br>
+            <button>Botón</button>
+            <p><br> Esto es otro párrafo</p>
+          </div>
+          <div class="container3" id="caja2">
+            <h3>Título</h3><br>
+            <button>Botón</button><br>
+            <p>Esto es un párrafo</p><br>
+            <p><br> Esto es otro párrafo</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pseudoclase10">
+        <h5 class="pag">10</h5>
+        <h3>:first-of-type</h3>
+        <p>La pseudo-clase :first-of-type de CSS representa el primer elemento de su tipo entre un grupo de elementos hermanos.</p>
+      </section>
+
+      <section class="sectionExperimental" id="pseudoclase11">
+        <h5 class="pag">11</h5>
+        <div class="containerTitles">
+          <h3  class="tituloExperimental">:fullscreen</h3>
+          <img src="images/experimental.svg" alt="">
+        </div>
+  
+        <p>La pseudo-clase :fullscreen de CSS representa un elemento que se muestra cuando el navegador está en modo de pantalla completa.</p>
+      </section>
+  
+      <section id="pseudoclase12">
+        <h5 class="pag">12</h5>
+        <h3>:focus</h3>
+        <p>La pseudo-clase :focus CSS representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.</p>
+      </section>
+  
+      <section id="pseudoclase13">
+        <h5 class="pag">13</h5>
+        <h5 class="pag">13</h5>
+        <h3>:hover</h3>
+        <p>La pseudo-clase :hover de CSS coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).</p>
+      </section>
+  
+      <section id="pseudoclase14">
+        <h5 class="pag">14</h5>
+        <h3>:indeterminate</h3>
+        <p>La pseudo-clase :indeterminate de CSS representa cualquier elemento de formulario cuyo estado sea indeterminado.</p>
+      </section>
+  
+      <section id="pseudoclase15">
+        <h5 class="pag">15</h5>
+        <h3>:in-range</h3>
+        <p>La pseudo-clase (en-US) :in-range de CSS representa un elemento <i class="segundoNivel">input</i> cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos min y max.</p>
+      </section>
+  
+      <section id="pseudoclase16">
+        <h5 class="pag">16</h5>
+        <h3>:invalid</h3>
+        
+        <p>La pseudo-clase :invalid de CSS representa cualquier elemento <i>input</i> u otro elemento <i>form</i> cuyos contenidos no se puedan validar.</p>
+        
+        <h4>Ejemplo:</h4>
+        
+        <p>A los elementos <i>input</i> se les especificaron los siguientes estilos en css: <br><br><i>input<i class="segundoNivel">:invalid</i>{<br>background-color: pink;}</i><br><br>De esta manera, cuando se ingrese un dato inválido en el campo, este se pintará de color rosa (pink).</p>
+        
+        <form class="formEjemplo">
+          <label for="url_input">Ingrese un número:</label>
+          <input type="number" id="num_input" />
+          <br>
+          <label for="email_input">Introduzca una dirección de correo electrónico:</label>
+          <input type="email" id="email_input" required/>
+        </form>
+        
+        </section>
+  
+      <section id="pseudoclase17">
+        <h5 class="pag">17</h5>
+        <h3>:lang()</h3>
+        <p>La pseudo-clase :lang() de CSS es utilizada para modificar elementos en función del idioma en el que se determina que están.</p>
+        
+        <h4>Ejemplo:</h4>
+        
+        <p>A la etiqueta <i>p</i> se le aplicaron los siguientes estilos en css: <br><br><i>p<i class="segundoNivel">:lang(en)</i>{<br>color:aqua;}</i><br><br>Esto quiere decir que aparecerá en color azul (aqua) el texto que esté establecido en idioma inglés (en).</p>
+        
+        <p class="textoEjemplo2" lang="es">Este es un texto en español.</p>
+        <p class="textoEjemplo2" lang="en">This is an English text.</p>
+        
+      </section>
+  
+      <section id="pseudoclase18">
+        <h5 class="pag">18</h5>
+        <h3>:last-child</h3>
+        <p>La pseudo-clase :last-child de CSS representa el último elemento entre un grupo de elementos hermanos.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase19">
+        <h5 class="pag">19</h5>
+        <h3>:last-of-type</h3>
+        <p>La pseudo-class :last-of-type de CSS representa el último elemento de su tipo entre un grupo de elementos hermanos.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase20">
+        <h5 class="pag">20</h5>
+        <h3>:left</h3>
+        <p>La pseudo-clase :left de CSS es utilizada con la regla @page, y representa todas las páginas de la izquierda de un documento impreso. <br> <br>
+        <b>Nota:</b> Esta pseudoclase se puede usar para cambiar solo las propiedades margin, padding, border y background del cuadro de página. Se ignorarán todas las demás propiedades y solo se verá afectado el cuadro de página, no el contenido del documento en la página.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase21">
+        <h5 class="pag">21</h5>
+        <h3>:link</h3>
+        <p>La pseudo-clase :link de CSS representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado <i>a</i>, <i>area</i>, o <i>link</i> que tiene un atributo href.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase22">
+        <h5 class="pag">22</h5>
+        <h3>:not()</h3>
+        <p>La pseudoclase :not() de CSS representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la pseudoclase de negación.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+
+      <section id="pseudoclase23">
+        <h5 class="pag">23</h5>
+        <h3>:nth-child</h3>
+        <p>La pseudo-clase :nth-child() de CSS coincide con uno o más elementos en función de su posición entre un grupo de hermanos.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase24">
+        <h5 class="pag">24</h5>
+        <h3>:nth-last-child</h3>
+        <p>La pseudo-clase :nth-last-child() de CSS selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase25">
+        <h5 class="pag">25</h5>
+        <h3>:nth-last-of-type()</h3>
+        <p>La pseudo-clase :nth-last-of-type() CSS coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase26">
+        <h5 class="pag">26</h5>
+        <h3>:nth-of-type</h3>
+        <p>La pseudo-clase :nth-of-type() de CSS selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase27">
+        <h5 class="pag">27</h5>
+        <h3>:only-child</h3>
+        <p>La pseudo-clase (en-US) :only-child de CSS representa un elemento sin hermanos. Esto es lo mismo que :first-child:last-child o :nth-child(1):nth-last-child(1), pero con una especificidad menor.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase28">
+        <h5 class="pag">28</h5>
+        <h3>:only-of-type</h3>
+        <p>La pseudo-clase :only-of-type CSS representa un elemento que no tiene hermanos del mismo tipo.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+
+      <section id="pseudoclase29">
+        <h5 class="pag">29</h5>
+        <h3>:optional</h3>
+        <p>La pseudo-clase :optional de CSS representa cualquier elemento <i>input</i>, <i>select</i>, o <i>textarea</i> que no tenga el atributo required establecido en él.<br>
+        Esta pseudo-clase es útil para diseñar campos que no son necesarios para enviar un formulario.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase30">
+        <h5 class="pag">30</h5>
+        <h3>:out-of-range</h3>
+        <p>La pseudo-clase (en-US) :out-of-range de CSS representa un elemento <i>input</i> cuyo valor actual está fuera de los límites de rango especificados por los atributos min y max.<br>
+        Esta pseudo-clase es útil para dar al usuario una indicación visual de que el valor actual de un campo está fuera de los límites permitidos.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase31">
+        <h5 class="pag">31</h5>
+        <h3>:read-only</h3>
+        <p>La pseudo-clase (en-US) :read-only de CSS representa un elemento que ya no es editable por el usuario (como un input).</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase32">
+        <h5 class="pag">32</h5>
+        <h3>:read-write</h3>
+        <p>La pseudo-clase :read-write de CSS representa un elemento (como un input) que es editable por el usuario.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase33">
+        <h5 class="pag">33</h5>
+        <h3>:required</h3>
+        <p>La pseudo-clase :required de CSS representa cualquier elemento <i>input</i>, <i>select</i>, o <i>textarea</i> que tenga el atributo required establecido en él. <br>
+        Esta pseudo-clase es útil para resaltar campos que deben tener datos válidos antes de que se pueda enviar un formulario.
+        </p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+      
+      <section id="pseudoclase34">
+        <h5 class="pag">34</h5>
+        <h3>:right</h3>
+        <p>La pseudo-clase CSS :right, utilizada con la regla @page, representa todas las páginas de la derecha de un documento impreso.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase35">
+        <h5 class="pag">35</h5>
+        <h3>:root</h3>
+        <>La pseudo-clase :root de CSS selecciona el elemento raíz de un árbol que representa el documento. En HTML, :root representa el elemento <i>html</i> y es idéntico al selector html, excepto que su especificidad es mayor.<br>
+        <b>:root</b>puede ser útil para declarar variables CSS globales</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase36">
+        <h5 class="pag">36</h5>
+        <h3>:scope</h3>
+        <p>El CSS pseudo-clase representa elementos que son un punto de referencia para los selectores para que coincida en contra.:scope</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase37">
+        <h5 class="pag">37</h5>
+        <h3>:target</h3>
+        <p>La pseudo-clase :target de CSS representa un elemento único (el elemento objetivo) con un id que coincide con el fragmento de la URL.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase38">
+        <h5 class="pag">38</h5>
+        <h3>:valid</h3>
+        <p>La pseudo-clase :valid de CSS representa cualquier elemento <i>input</i> u otro elemento <i>form</i> cuyo contenido se valide satisfactoriamente. Esto permite que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados correctamente.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+  
+      <section id="pseudoclase39">
+        <h5 class="pag">39</h5>
+        <h3>:visited</h3>
+        <p>La pseudo-clase :visited de CSS representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.</p>
+        <h4>Ejemplo</h4>
+        <p></p>
+        <div class="codeBox"></div>
+        <p></p>
+        <!--Ejemplo-->
+      </section>
+    </div>
+  </main>
+
+  <footer>
+  </footer>
+  
+  <script src="script.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>
